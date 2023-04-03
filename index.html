@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notas Manu</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1 class="d-flex justify-content-center text-light my-5">
+      Bienvenido a las notas de Manuel
+    </h1>
+    <section>
+      <form class="d-flex mx-5" role="search">
+        <input
+          class="form-control me-5"
+          type="search"
+          placeholder="Buscar Notas"
+          aria-label="Search"
+        />
+        <button class="btn me-md-5 boton text-light" type="button">
+          <strong>Buscar</strong>
+        </button>
+      </form>
+    </section>
+    <section>
+      <div class="d-flex my-5 mx-5 text-light misNotas">
+        <h3 class="mx-4 my-3">Mis Notas</h3>
+        <button
+          class="btn boton text-light my-3 mx-4"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          <strong>Agregar Nota</strong>
+        </button>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content formulario">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 text-dark" id="staticBackdropLabel">
+                    <h1 class="text-dark">Agregar una Nota</h1>
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form action="">
+                    <h5 class="text-dark my-3">Título</h5>
+                    <input id="tituloNota" type="text" maxlength="30" class="form-control my-3" />
+                    <h5 class="text-dark my-4">Descripción</h5>
+                    <input id="descripcionNota" type="text" maxlength="3000" class="form-control my-3" />
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                  <button onclick="agregarNota()" type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                    Crear Nota
+                  </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+<section>
+    <div id="nuevaNota" class="d-flex my-5 mx-5 text-light misNotas"></div>
+</section>
+    <script src="./app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

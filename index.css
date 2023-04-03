@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-color: #018bd69c;
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+.boton{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FF0000;
+}
+.boton:hover{
+    background-color: aqua;
+}
+.misNotas{
+    justify-content: space-between;
+    background-color: rgb(80, 80, 80);
+    border-radius: 0.5rem;
+}
+.formulario{
+    background-color: gray;
+}
+
+@media (max-width:300px){
+    body{
+        width: 30rem;
+    }
+}
